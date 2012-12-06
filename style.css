@@ -2990,3 +2990,8 @@ li.current-event .tip {
 #footer {
     display: none;
 }
+
+.navi-left.vm a.active {
+    background-image: none;
+    padding-right: 7px;
+}
