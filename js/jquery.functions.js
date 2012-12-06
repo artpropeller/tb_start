@@ -214,8 +214,8 @@ function showCourseNamePopup()
 }
 
 function resOther(d,e){
-	$(d).height($('#main').height()-170);
-	$(e).height($('#main').height()-245);
+//	$(d).height($('#main').height()-170);
+	$(e).height($('#main').height()-200);
 	api=$(e).data('jsp');
 	api.reinitialise();
 }

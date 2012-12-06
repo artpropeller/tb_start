@@ -17,14 +17,14 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
-    min-height: 750px;
+    /*min-height: 750px;*/
     background: url(images/bg/cont-bg.png) repeat-x 0 bottom #fafafa;
 }
 
 body {
     width: 100%;
     height: 100%;
-    min-height: 750px;
+    /*min-height: 750px;*/
 }
 
 body,
@@ -227,15 +227,13 @@ ul.feed > li {
 /* containers */
 #main {
     position: relative;
-    height: 100%;
-    min-height: 750px;
+    /*min-height: 750px;*/
     margin: 0 auto;
     min-width: 960px;
     max-width: 2000px;
     width: 100%;
-    width: 100%;
     height: 100%;
-    min-height: 750px;
+    min-height: 600px;
     overflow: hidden;
 }
 
@@ -1247,7 +1245,7 @@ ul.feed li .author {
 /* inner page  */
 .inner-content {
     margin: 0 10px 0 238px;
-    min-height: 450px;
+    /*min-height: 450px;*/
 }
 
 .sidebar {
@@ -1432,7 +1430,7 @@ ul.feed li .author {
 .content-part {
     /*width: 100%;*/
     /*float: right;*/
-    position: relative;
+    /*position: relative;*/
     margin-left: 214px;
 }
 
@@ -1814,8 +1812,12 @@ a.blue-meet:hover {
 
 .events-list {
     overflow: auto;
-    height: 80%;
+    /*height: 100% !important;*/
+    margin-bottom: 10px;
+    height: 480px;
 }
+
+
 
 ul.event-list-inner {
     margin: 0 7px !important;
@@ -2661,7 +2663,8 @@ ul.course-list > li:hover {
 }
 
 #header .container {
-    width: 1000px;
+    min-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: auto;
     position: relative;
@@ -2875,7 +2878,7 @@ ul.course-list > li:hover {
     height: 24px;
     z-index: 100;
     background: url("images/wsha.png") repeat-x top;
-    bottom: 3px;
+    bottom: 23px;
     width: 99.5%;
     margin: 0 3px;
 }
@@ -2972,4 +2975,13 @@ li.current-event .tip {
     max-width: 1165px;
     min-width: 960px;
     margin: 0 auto;
+    /*height: 100%;*/
+}
+
+.dashed-container {
+    min-height: 480px;
+}
+
+#footer {
+    display: none;
 }
