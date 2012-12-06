@@ -1888,7 +1888,7 @@ ul.event-list-inner li.current-event .one-event .author {
 
 .event-navi {
     position: absolute;
-    right: 15px;
+    right: 21px;
     top: 25px;
 }
 
@@ -1923,12 +1923,17 @@ ul.event-list-inner li.current-event .one-event .author {
 .event-navi ul li a:hover {
 }
 
+.jspVerticalBar {
+    z-index: 0;
+}
+
 .tip {
-    padding: 0 10px;
+    padding: 0 3px;
     top: 33px;
     left: -50px;
     height: 23px;
     line-height: 23px;
+    z-index: 10000000;
     position: absolute;
     visibility: hidden;
     background: #fcfcfc; /* Old browsers */
