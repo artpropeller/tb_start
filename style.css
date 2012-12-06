@@ -1252,9 +1252,9 @@ ul.feed li .author {
 
 .sidebar {
     float: left;
-    position: relative;
+    /*position: relative;*/
     width: 204px;
-    margin: 0 10px 0 -214px;
+    /*margin: 0 10px 0 -214px;*/
 }
 
 .btn-download {
@@ -1430,9 +1430,10 @@ ul.feed li .author {
 }
 
 .content-part {
-    width: 100%;
-    float: right;
+    /*width: 100%;*/
+    /*float: right;*/
     position: relative;
+    margin-left: 214px;
 }
 
 .content-part .navi-right {
@@ -1442,9 +1443,10 @@ ul.feed li .author {
 }
 
 .navi-left {
-    float: left;
+    /*float: left;*/
     width: 50%;
     padding: 0 0 10px 0;
+    overflow: auto;
 }
 
 .navi-left a {
@@ -2964,4 +2966,10 @@ li.current-event h3 {
 
 li.current-event .tip {
     top: 38px;
+}
+
+.inner-content {
+    max-width: 1165px;
+    min-width: 960px;
+    margin: 0 auto;
 }

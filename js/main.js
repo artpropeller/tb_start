@@ -5,7 +5,16 @@ $(function () {
     });
 
     $('.pop_up_rec .del').click(function(){
+        var par = $(this).parents('.pop_up_rec');
         $(this).parent().parent().remove();
+        var s = par.find('li').size();
+        if ( s > 0) {
+            par.prev().find('em').text('('+s+')');
+        }
+        else {
+            par.prev().find('em').text('('+s+')');
+            par.remove();
+        }
         return false;
     });
 
@@ -25,7 +34,7 @@ $(function () {
             console.log(pad);
             pad = pad + $(this)[0].offsetWidth;
         });
-//        pad = pad + 20;
+        pad = pad + 10;
         h3.css('width', (h3[0].offsetWidth - pad) + 'px');
 
         if (h3[0].offsetWidth < a[0].offsetWidth) {
