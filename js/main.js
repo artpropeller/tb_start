@@ -25,7 +25,7 @@ $(function () {
 
     function addTooltipsVideo(){
 
-    $('.current-event').each(function(){
+    $('.one-event').each(function(){
         var a = $(this).find('h3 a');
         var h3 = $(this).find('h3');
         h3.css('width', 'auto');

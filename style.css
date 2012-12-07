@@ -1253,6 +1253,7 @@ ul.feed li .author {
     /*position: relative;*/
     width: 204px;
     /*margin: 0 10px 0 -214px;*/
+    padding-left: 26px;
 }
 
 .btn-download {
@@ -1431,7 +1432,7 @@ ul.feed li .author {
     /*width: 100%;*/
     /*float: right;*/
     /*position: relative;*/
-    margin-left: 214px;
+    margin-left: 240px;
 }
 
 .content-part .navi-right {
@@ -2669,7 +2670,7 @@ ul.course-list > li:hover {
 
 #header .container {
     min-width: 960px;
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
     overflow: auto;
     position: relative;
@@ -2964,7 +2965,11 @@ li.current-event .event-navi ul li {
     box-shadow: 0 0 13px #a9a9a9;
 }
 
-li.current-event h3 {
+li .one-event {
+    padding-right: 110px;
+}
+
+li .one-event h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
