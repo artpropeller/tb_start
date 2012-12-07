@@ -3021,6 +3021,7 @@ li.current-event .tip {
 
 @media (max-width:1400px) {
     #centring {
+        width: 960px;
     max-width: 1165px;
     }
 }
