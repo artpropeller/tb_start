@@ -224,8 +224,8 @@ function resHome(){
 	$('#main').width()>1400  ? $('#main').addClass('wide') : $('#main').removeClass('wide');
 	h=$('#main').height();
 	if(h>500){
-		if($('.wide').size()){$('.content-wrapper-column').height(h-130);}
-		else{$('.content-wrapper-column').height(h/2-78);$('.first-column').height(h-130);}
+		if($('.wide').size()){$('.content-wrapper-column').height(h-80);}
+		else{$('.content-wrapper-column').height(h/2-54);$('.first-column').height(h-80);}
 	}
 }
 function resInner(intLoad,api,api2){

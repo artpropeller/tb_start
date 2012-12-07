@@ -477,7 +477,7 @@ div:hover > .plus-submenu {
     height: 40%;
     width: 48%;
     max-width: 554px;
-    margin: 0 1% 2.5% 1%;
+    margin: 0 1% 30px 1%;
     min-height: 210px;
     /*	padding-top:1px;*/
 }
@@ -489,6 +489,7 @@ div:hover > .plus-submenu {
 
 .content-wrapper-column.last {
     margin-top: 1px;
+    margin-bottom: 0;
 }
 
 @media all and (-webkit-min-device-pixel-ratio:0) {
@@ -535,12 +536,11 @@ div:hover > .plus-submenu {
     position: relative;
     float: left;
     height: 100%;
-    min-height: 300px;
+    min-height: 200px;
     width: 100%;
     overflow: hidden;
     border: transparent 1px dashed;
     background: url(images/bg/dashed-v.png) repeat-y right 0, url(images/bg/dashed.png) repeat-x -1px 0, url(images/bg/dashed.png) repeat-x 0 bottom, url(images/bg/dashed-v.png) repeat-y 0 0;
-/ / background : none;
 
 }
 
@@ -647,7 +647,8 @@ div:hover > .plus-submenu {
 }
 
 ul.course-list {
-    padding: 12px 15px;
+    padding: 12px 15px 0;
+    margin: 0;
 }
 
 ul.course-list > li {
@@ -1139,12 +1140,13 @@ ul.video-list > li p a:first-child {
 }
 
 ul.feed {
-    margin: 0 15px;
+    margin: 0 8px;
 }
 
 ul.feed li {
-    padding: 0 0 13px 6px;
+    padding: 0 0 13px 7px;
     margin: 0 0 13px 0;
+    position: relative;
     background: url(images/bg/dashed.png) bottom left repeat-x;
 }
 
@@ -2969,7 +2971,7 @@ li .one-event {
     padding-right: 110px;
 }
 
-li .one-event h3 {
+.video-list h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2999,4 +3001,26 @@ li.current-event .tip {
 .navi-left.vm a.active {
     background-image: none;
     padding-right: 7px;
+}
+
+.content-block .inner-block .vbtn {
+    top:-23px;
+}
+
+.content-wrapper-column .inner-block {
+    height: 82%;
+}
+
+#centring {
+    min-width: 960px;
+    max-width: 1650px;
+    margin: 0 auto;
+    overflow: auto;
+    height: 100%;
+}
+
+@media (max-width:1400px) {
+    #centring {
+    max-width: 1165px;
+    }
 }

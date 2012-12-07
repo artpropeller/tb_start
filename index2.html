@@ -28,7 +28,7 @@
     <script type="text/javascript">
         $(function () {
             $('.inner-block').each(function () {
-                        $(this).jScrollPane();
+                        $(this).jScrollPane({animateScroll:true, autoReinitialise: true});
                         var api = $(this).data('jsp');
                         var throttleTimeout;
                         $(window).bind(
@@ -100,6 +100,8 @@
 </div>
 <!-- ____ /HEADER ____ -->
 <!-- ____ CONTENT ____ -->
+
+<div id="centring">
 <div class="content-wrapper-column first-column">
 <div class="content-block">
 <div class="inner-block-header">
@@ -745,8 +747,10 @@
                     ноге слона»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
                 </li>
             </ul>
+            <div class="clear"></div>
         </div>
     </div>
+</div>
 </div>
 <div class="clear"></div>
 <!-- ____ /CONTENT ____ -->
