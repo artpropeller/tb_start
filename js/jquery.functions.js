@@ -225,7 +225,7 @@ function resHome(){
 	h=$('#main').height();
 	if(h>500){
 		if($('.wide').size()){$('.content-wrapper-column').height(h-90);}
-		else{$('.content-wrapper-column').height(h/2-64);$('.first-column').height(h-90);}
+		else{$('.content-wrapper-column').height(h/2-59);$('.first-column').height(h-90);}
 	}
 }
 function resInner(intLoad,api,api2){
@@ -246,8 +246,7 @@ function resInner(intLoad,api,api2){
 							parseInt($('.folders-list .jspPane>ul>li').css('padding-left')) +
 							parseInt($('.folders-list .jspPane>ul>li').css('padding-right')) + 6;
 				$('.folders-list-container').width(Math.floor($('.folders-list-container').parent().width()/item_w) * item_w);
-				console.log(item_w);
-				
+
 				api.reinitialise();
 				api2.reinitialise();			
 			}			

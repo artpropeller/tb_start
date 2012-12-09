@@ -31,7 +31,6 @@ $(function () {
         h3.css('width', 'auto');
         var pad = 0;
         $(this).find('.vbtn').each(function(){
-            console.log(pad);
             pad = pad + $(this)[0].offsetWidth;
         });
         pad = pad + 10;

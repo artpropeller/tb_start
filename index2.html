@@ -24,6 +24,7 @@
     <script type="text/javascript" src="js/jquery.functions.js"></script>
     <script type="text/javascript" src="js/arrowbox.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/messagesBoxes.js"></script>
 
     <script type="text/javascript">
         $(function () {
@@ -63,13 +64,8 @@
                 beforeStop:function (event, ui) {
                     $('.placeholder').parent().find('.content-block:not(.ui-cur)').appendTo($('.ui-prevent').removeClass('ui-prevent'))
                     $('.ui-cur').removeClass('ui-cur');
-                },
-                stop:function (event, ui) {
-                    $('.inner-block').each(function () {
-                        var api = $(this).data('jsp');
-                        api.reinitialise();
-                    });
                 }
+
             })
             /*.disableSelection();*/
 
@@ -117,7 +113,7 @@
 <div class="inner-block">
 <ul class="course-list">
 <li>
-    <div class="col">8</div>
+    <div class="col" rel='#course-mes-234'>8</div>
     <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/html.jpg"
                                                                   alt=""/></b><i></i></span>
         <em>курс</em> Основы HTML и CSS верстки </a>
@@ -161,7 +157,7 @@
     </div>
 </li>
 <li>
-    <div class="col red">8</div>
+    <div class="col red" rel='#course-mes-234'>8</div>
     <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/psh.jpg"
                                                                   alt=""/></b><i></i></span>
         <em>курс</em> Фотошоп для фотографов и дизайнеров </a>
@@ -205,7 +201,7 @@
     </div>
 </li>
 <li class="test-li">
-    <div class="col">8</div>
+    <div class="col" rel='#course-mes-234'>8</div>
     <a href="#" class="img-box"> <span class="img"><img src="images/content-im/test.png"
                                                         alt=""/></span> <em>тест</em>
         Был Энштейн
@@ -252,7 +248,7 @@
     </div>
 </li>
 <li>
-    <div class="col">8</div>
+    <div class="col" rel='#course-mes-234'>8</div>
     <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/test.jpg"
                                                                   alt=""/></b><i></i></span>
         <em>курс</em> Новый тест Люшера-Ковальского </a>
@@ -761,5 +757,80 @@
 <!-- ____ /FOOTER ____ -->
 </div>
 <!-- /PAGE -->
+<div class="box-mes" id="course-mes-234">
+    <div class="head-mes">
+        <h6>Сообщения</h6>
+        <a class="subs-mes" href="#">рассылка</a>
+    </div>
+    <div class="container-mes">
+        <div class="item-mes new-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava1.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер <span>6</span></div>
+                <p>Воспитание, в представлении Морено, взаимно. Сновидение...</p>
+            </div>
+        </div>
+        <div class="item-mes new-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava2.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Николай Носков <span>2</span></div>
+                <p>Представленный контент-анализ является психолингвистическим...</p>
+            </div>
+        </div>
+        <div class="item-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Автандил Калашников</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Автандил Калашников</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Автандил Калашников</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+    </div>
+    <div class="foot-mes">
+        <a class="all-mes" href="#">Все сообщения</a>
+    </div>
+</div>
 </body>
 </html>
