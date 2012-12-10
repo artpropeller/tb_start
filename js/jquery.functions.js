@@ -225,7 +225,7 @@ function resHome(){
 	h=$('#main').height();
 	if(h>500){
 		if($('.wide').size()){$('.content-wrapper-column').height(h-90);}
-		else{$('.content-wrapper-column').height(h/2-59);$('.first-column').height(h-90);}
+		else{$('.content-wrapper-column').height(h/2-56);$('.first-column').height(h-90);}
 	}
 }
 function resInner(intLoad,api,api2){
