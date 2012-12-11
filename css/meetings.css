@@ -18,37 +18,14 @@ html, body {
 }
 
 
-ul.course-list {
-    padding: 12px 15px;
-}
 
 
 .video-time {
-    left: 1px;
     top: 7px;
     min-height: 47px;
     left: 10px;
 }
 
-.inner-block .video-time {
-    left: 0;
-}
-
-.inner-block .now .video-time {
-    left: 10px;
-}
-
-
-
-ul.video-list h3,
-ul.video-list h3 a {
-    width: auto;
-}
-
-
-ul.video-list {
-    padding-bottom: 20px;
-}
 
 
 .one-event {
@@ -70,8 +47,6 @@ ul.event-list-inner li.disabled-event .video-time strong {
 ul.event-list-inner li.current-event .one-event * {
     color: #000;
 }
-
-
 
 li:hover > .tip,
 a:hover > .tip {
@@ -97,14 +72,6 @@ li.current-event:hover .event-navi {
 }
 
 
-.placeholder {
-    background: url(../images/bg/dashed-v-blue.png) repeat-y right 0, url(../images/bg/dashed-blue.png) repeat-x 0 0, url(../images/bg/dashed-blue.png) repeat-x 0 bottom, url(../images/bg/dashed-v-blue.png) repeat-y 0 0;
-    z-index: 100;
-    padding: 0 0 2px 2px;
-    left: 0;
-    top:1px;
-    min-height: 0;
-}
 
 #datepicker {
     border-top: 1px solid #d7d7d7;
@@ -112,6 +79,8 @@ li.current-event:hover .event-navi {
     margin-top: 4px;
     padding-top: 4px;
 }
+
+
 .video-time span {
     background: #fff;
     width: 45px;
@@ -317,11 +286,6 @@ li.current-event:hover .event-navi {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-.inner-block .vbtn {
-    top: -21px;
-    position: relative;
-}
-
 .vbtn.red {
     background: url("../images/vid_btn_red.jpg") repeat-x top;
     border-color: #a43332;
@@ -412,37 +376,6 @@ li.current-event .tip {
     background-image: none;
     padding-right: 7px;
 }
-
-.content-block .inner-block .vbtn {
-    top:-23px;
-}
-
-.content-wrapper-column .inner-block {
-    height: 82%;
-}
-
-#centring {
-    min-width: 960px;
-    max-width: 1650px;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 100%;
-}
-
-@media (max-width:1400px) {
-    #centring {
-        width: 960px;
-        max-width: 1165px;
-    }
-}
-
-.placeholder {
-    /*background: #000;*/
-    /*margin: -1px 0 0 0;*/
-    /*padding-bottom: 2px;*/
-    /*background: url(../images/bg/dashed-v-blue.png) repeat-y right 0, url(../images/bg/dashed-blue.png) repeat-x 0 0, url(../images/bg/dashed-blue.png) repeat-x 0 bottom, url(../images/bg/dashed-v-blue.png) repeat-y 0 0;*/
-}
-
 
 
 .sidebar {
