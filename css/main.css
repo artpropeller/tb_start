@@ -10,7 +10,7 @@ html, body {
 
 #main {
     margin: 0 auto;
-    min-width: 960px;
+    min-width: 1000px;
     width: 100%;
     height: 100%;
     min-height: 600px;
@@ -163,13 +163,6 @@ ul.video-list {
     height: 100%;
 }
 
-@media (max-width:1400px) {
-    #centring {
-        width: 960px;
-        max-width: 1165px;
-    }
-}
-
 
 .content-block {
     behavior: url(PIE.htc);
@@ -181,5 +174,103 @@ ul.video-list {
     width: 100%;
     overflow: hidden;
     background: url(../images/bg/dashed-v.png) repeat-y right 0, url(../images/bg/dashed.png) repeat-x 0 0, url(../images/bg/dashed.png) repeat-x 0 bottom, url(../images/bg/dashed-v.png) repeat-y 0 0;
+
+}
+
+.h-logo {
+    padding-top: 3px;
+    width: auto;
+}
+
+.header-search {
+    position: absolute;
+    right: 50px;
+}
+
+.h-personal {
+    display: block;
+    padding: 0;
+    position: relative;
+    top: 9px;
+    margin-right: 5px;
+
+}
+
+#header .container {
+    min-width: 1000px;
+    max-width: 1650px;
+    width: auto;
+    position: relative;
+}
+
+#main.wide .content-wrapper-column.last {
+    margin-right: 0;
+}
+
+#main.wide .content-wrapper-column {
+    width: 31.1%;
+}
+
+@media (min-width:1401px) {
+    .h-menu {
+        width: 79%;
+        overflow: auto;
+    }
+
+    .h-menu a {
+        margin: 0 3.1% !important;
+    }
+
+    .header-search {
+        right: 60px;
+    }
+
+    .h-personal {
+        margin-right: 15px;
+    }
+}
+
+
+#header {
+    padding: 0;
+}
+
+
+
+@media (max-width:1400px) {
+    #centring {
+        min-width: 1000px;
+        max-width: 1165px;
+        width: auto;
+    }
+
+    #header .container {
+        max-width: 1165px;
+        width: auto;
+    }
+
+    .h-personal img {
+        display: block;
+    }
+
+
+
+    .header-search {
+        right: 60px;
+    }
+
+    .h-personal {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width:1161px) {
+    .header-search {
+        right: 50px;
+    }
+
+    .h-personal {
+        margin-right:4px;
+    }
 
 }

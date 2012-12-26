@@ -63,7 +63,7 @@ $(document).ready(function(e) {
 	
 	$('.search-animate input[type=text]').focus(function(e) {
 		$(this).parents('.search-animate').addClass('focused');
-		$(this).parents('.search-animate').stop(true,false).animate({width:175}).addClass('focus');
+		$(this).parents('.search-animate').stop(true,false).animate({width:155}).addClass('focus');
 	}).blur(function(e) {
 		$(this).parents('.search-animate').removeClass('focused');
 		$(this).parents('.search-animate').stop(true,false).animate({width:119}).removeClass('focus');
