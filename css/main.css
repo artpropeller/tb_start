@@ -10,7 +10,7 @@ html, body {
 
 #main {
     margin: 0 auto;
-    min-width: 1000px;
+    min-width: 960px;
     width: 100%;
     height: 100%;
     min-height: 600px;
@@ -197,10 +197,14 @@ ul.video-list {
 }
 
 #header .container {
-    min-width: 1000px;
+    min-width: 960px;
     max-width: 1650px;
     width: auto;
     position: relative;
+}
+
+.col {
+    padding: 1px 8px 1px 9px;
 }
 
 #main.wide .content-wrapper-column.last {
@@ -212,14 +216,6 @@ ul.video-list {
 }
 
 @media (min-width:1401px) {
-    .h-menu {
-        width: 79%;
-        overflow: auto;
-    }
-
-    .h-menu a {
-        margin: 0 3.1% !important;
-    }
 
     .header-search {
         right: 60px;
@@ -239,7 +235,7 @@ ul.video-list {
 
 @media (max-width:1400px) {
     #centring {
-        min-width: 1000px;
+        min-width: 960px;
         max-width: 1165px;
         width: auto;
     }
