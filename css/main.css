@@ -30,6 +30,10 @@ ul.course-list {
     left: 10px;
 }
 
+.video-list .video-time {
+    min-height: 46px;
+}
+
 .inner-block .video-time {
     left: 0;
 }
@@ -323,3 +327,9 @@ ul.feed li {
     display: block;
 }
 
+.img-box > span.corner-ico i {
+    box-shadow: 3px 4px 3px rgba(0,0,0,0.2);
+    height: 95px;
+    width: 93px;
+    top:-2px;
+}
