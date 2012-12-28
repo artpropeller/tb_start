@@ -31,7 +31,7 @@
     <script type="text/javascript">
         $(function () {
             $('.inner-block').each(function () {
-                        $(this).jScrollPane({animateScroll:true, autoReinitialise:true});
+                        $(this).jScrollPane({animateScroll:true, autoReinitialise:true, verticalDragMaxHeight:600});
                         var api = $(this).data('jsp');
                         var throttleTimeout;
                         $(window).bind(
@@ -588,7 +588,7 @@
 
                     <h3><a href="#">Английский язык за два дня в имперском стиле посмотрим сегодня ночью</a></h3>
 
-                    <p><a href="#" class="author">Александр Константинов</a></p>
+                    <p><a href="#" class="author">Александр-Первый Константинович Кукошонский</a></p>
 
                     <a href="#" class="vbtn red">Завершить</a>
                     <a href="#" class="vbtn green">Войти</a>
@@ -762,86 +762,28 @@
 <div class="box-mes" id="course-mes-235">
     <div class="head-mes">
         <h6 class="float_left">Сообщения</h6>
-        <a class="float_right" href="#">Вернуться назад</a>
+
 
         <div class="clear"></div>
 
 
     </div>
     <div class="container-mes small">
-        <div class="scroll">
-            <div class="inner_mes">
-                <div class="mes">
-                    <img src="images/mava1.png" width="40" height="40" alt="">
-
-                    <div class="txt">
-                        <div class="author_inf">
-                            <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
-                                class="float_right">Сегодня, 12:45</em>
-
-
-                        </div>
-                        <p>Воспитание, в представлении Морено, взаимно. Сновидение как принято считать... касается
-                            чего-то
-                            слишком общего. </p>
-
-                    </div>
-                </div>
-                <div class="mes">
-                    <img src="images/mava1.png" width="40" height="40" alt="">
-
-                    <div class="txt">
-                        <div class="author_inf">
-                            <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
-                                class="float_right">Сегодня, 12:45</em>
-
-
-                        </div>
-                        <p>Воспитание, в представлении Морено, взаимно. Сновидение как принято считать... касается
-                            чего-то
-                            слишком общего. </p>
-
-                    </div>
-                </div>
-
-                <div class="mes">
-                    <img src="images/mava1.png" width="40" height="40" alt="">
-
-                    <div class="txt">
-                        <div class="author_inf">
-                            <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
-                                class="float_right">Сегодня, 12:45</em>
-
-
-                        </div>
-                        <p>Представленный контент-анализ является психолингвистическим в своей основе. Вот воспитание, в
-                            представлении Морено, взаимно.
-                            чего-то слишком общего. Архетип, например, отражает аутотренинг одинаково. </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="send_mes_form">
-            <input type="text" value="">
-            <input type="submit" value="ответить">
-
-        </div>
 
 
     </div>
-    <div class="bot">
-    </div>
+
 </div>
 
 <div class="box-mes" id="course-mes-234">
     <div class="head-mes">
+        <a class="float_right backs" href="#">Вернуться назад</a>
         <h6>Сообщения</h6>
+
 
     </div>
     <div class="container-mes">
-        <div class="item-mes new-mes">
+        <div class="item-mes new-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava1.png" alt=""></div>
             <div class="info-mes">
@@ -849,7 +791,7 @@
                 <p>Воспитание, в представлении Морено, взаимно. Сновидение...</p>
             </div>
         </div>
-        <div class="item-mes new-mes">
+        <div class="item-mes new-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava2.png" alt=""></div>
             <div class="info-mes">
@@ -857,7 +799,7 @@
                 <p>Представленный контент-анализ является психолингвистическим...</p>
             </div>
         </div>
-        <div class="item-mes">
+        <div class="item-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
             <div class="info-mes">
@@ -865,7 +807,7 @@
                 <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
             </div>
         </div>
-        <div class="item-mes">
+        <div class="item-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
             <div class="info-mes">
@@ -873,7 +815,7 @@
                 <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
             </div>
         </div>
-        <div class="item-mes">
+        <div class="item-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
             <div class="info-mes">
@@ -881,7 +823,7 @@
                 <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
             </div>
         </div>
-        <div class="item-mes">
+        <div class="item-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
             <div class="info-mes">
@@ -889,7 +831,7 @@
                 <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
             </div>
         </div>
-        <div class="item-mes">
+        <div class="item-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
             <div class="info-mes">
@@ -897,7 +839,7 @@
                 <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
             </div>
         </div>
-        <div class="item-mes">
+        <div class="item-mes" rel="mes-user-22">
             <div class="date-mes">Вчера, 12:45</div>
             <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
             <div class="info-mes">
@@ -905,10 +847,71 @@
                 <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
             </div>
         </div>
+
+        <div class="inner_mes" id="mes-user-22">
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Воспитание, в представлении Морено, взаимно. Сновидение как принято считать... касается
+                        чего-то
+                        слишком общего. </p>
+
+                </div>
+            </div>
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Воспитание, в представлении Морено, взаимно. Сновидение как принято считать... касается
+                        чего-то
+                        слишком общего. </p>
+
+                </div>
+            </div>
+
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Представленный контент-анализ является психолингвистическим в своей основе. Вот воспитание, в
+                        представлении Морено, взаимно.
+                        чего-то слишком общего. Архетип, например, отражает аутотренинг одинаково. </p>
+
+                </div>
+            </div>
+        </div>
+
     </div>
+
+
     <div class="foot-mes">
         <a class="all-mes" href="#">Все сообщения</a>
     </div>
+    <div class="send_mes_form">
+        <input type="text" value="">
+        <input type="submit" value="ответить">
+
+    </div>
+    <div class="bot"></div>
 </div>
 </body>
 </html>

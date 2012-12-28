@@ -43,7 +43,6 @@ $(function(){
                     blPos = 'ne';
                 }
             }
-            console.log(blPos);
 
         }
 
@@ -94,8 +93,28 @@ $(function(){
         function(){
             $(this).fadeOut(100);
             $(this).removeClass('s').removeClass('w').removeClass('n').removeClass('e').removeClass('nw');
+            $('.box-mes .bot, .box-mes .inner_mes, .box-mes .head-mes .backs, .box-mes .send_mes_form').hide(0);
+            $('.box-mes .foot-mes, .item-mes').show(0);
+            $('.box-mes .container-mes').css({'height':'310px', 'min-height':'310px'});
+            $('.box-mes .container-mes').data('jsp').reinitialise();
         }
     )
+
+    $('.box-mes .item-mes').click(function(){
+        $('.item-mes').hide(0);
+        $('#'+$(this).attr('rel')).show(0);
+        $('.box-mes .bot, .box-mes .head-mes .backs, .box-mes .send_mes_form').show(0);
+        $('.box-mes .foot-mes').hide(0);
+        $('.box-mes .container-mes').css({'height':'258px', 'min-height':'258px'});
+        $('.box-mes .container-mes').data('jsp').reinitialise();
+    });
+
+    $('.box-mes .backs').click(function(){
+        $('.box-mes .bot, .box-mes .inner_mes, .box-mes .head-mes .backs, .box-mes .send_mes_form').hide(0);
+        $('.box-mes .foot-mes, .item-mes').show(0);
+        $('.box-mes .container-mes').css({'height':'310px', 'min-height':'310px'});
+        $('.box-mes .container-mes').data('jsp').reinitialise();
+    });
 
 });
 

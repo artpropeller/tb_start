@@ -283,6 +283,7 @@
 .box-mes .send_mes_form {
     overflow: auto;
     padding: 10px 15px 15px;
+    background: #f0f6fc;
 
 }
 
@@ -317,6 +318,12 @@
 .box-mes .container-mes.small{
    height: 255px !important;
     min-height: 255px;
+}
+
+
+.box-mes .bot, .box-mes .inner_mes, .box-mes .head-mes .backs, .box-mes .send_mes_form {
+    display: none;
+
 }
 
 

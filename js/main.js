@@ -23,11 +23,11 @@ $(function () {
         return false;
     });
 
-    function addTooltipsVideo(){
+    function addTooltipsVideo(parent, children){
 
     $('.video-list>li, .event-list-inner>li').each(function(){
-        var a = $(this).find('h3 a');
-        var h3 = $(this).find('h3');
+        var a = $(this).find(children);
+        var h3 = $(this).find(parent);
         h3.css('width', 'auto');
         var pad = 0;
         $(this).find('.vbtn').each(function(){
@@ -48,14 +48,15 @@ $(function () {
 
     }
 
-    addTooltipsVideo();
+
+
+    addTooltipsVideo('h3', 'h3 a');
+    addTooltipsVideo('p', 'p a');
 
     $(window).resize(function(){
-        addTooltipsVideo();
+        addTooltipsVideo('h3', 'h3 a');
+        addTooltipsVideo('p', 'p a');
     });
-
-
-
 
 });
 
