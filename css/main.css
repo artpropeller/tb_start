@@ -333,3 +333,22 @@ ul.feed li {
     width: 93px;
     top:-2px;
 }
+
+.jspDrag{
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    display: none;
+}
+.jspDragTop{
+    background: none;
+    top:0;
+}
+
+.jspDragBottom{
+    background: none;
+}
+
+.jspScrollable:hover .jspDrag{
+    margin-top: 0;
+    display: block;
+}

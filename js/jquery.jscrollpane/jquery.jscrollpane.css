@@ -59,7 +59,7 @@
 }
 
 .jspDrag{
-	
+
 	position: relative;
 	top: 0;
 	left: 0;
@@ -139,7 +139,7 @@
 .over-right:hover .jspDragTop,
 .jspScrollable:hover .jspDragTop{
 	background-position:0 0;}
-	
+
 
 .jspScrollable,
 .jspContainer,
