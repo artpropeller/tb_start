@@ -4,7 +4,7 @@ $(function(){
 
     var option_scroll = {animateScroll:true, autoReinitialise: true};
 
-    $('.box-mes .container-mes').jScrollPane(option_scroll);
+    $('.box-mes .container-mes, .box-mes .container-mes .scroll').jScrollPane(option_scroll);
 
     $('.course-list .col').hover(function(){
         hover_mes = false;
