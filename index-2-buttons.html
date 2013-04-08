@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Logotype - home</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="copyright" content=""/>
+    <link type="text/css" href="js/jquery.jscrollpane/jquery.jscrollpane.css" rel="stylesheet" media="all"/>
+    <link type="text/css" rel="stylesheet" href="style-copy.css"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="css/box-messages.css"/>
+    <!-- fancy -->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <link type="text/css" rel="stylesheet" href="js/jquery.fancybox/jquery.fancybox.css"/>
+    <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.functions.js"></script>
+    <script type="text/javascript" src="js/arrowbox.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/messagesBoxes.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.inner-block').each(function () {
+                        $(this).jScrollPane({animateScroll:true, autoReinitialise:true, verticalDragMaxHeight:600});
+                        var api = $(this).data('jsp');
+                        var throttleTimeout;
+                        $(window).bind(
+                                'resize', function () {
+                                    if ($.browser.msie) {
+                                        if (!throttleTimeout) {
+                                            throttleTimeout = setTimeout(function () {
+                                                api.reinitialise();
+                                                throttleTimeout = null;
+                                            }, 50);
+                                        }
+                                    }
+                                    else {
+                                        api.reinitialise();
+                                    }
+                                }
+                        );
+
+                    }
+            )
+
+            $('.content-wrapper-column').sortable({
+                connectWith:'.content-wrapper-column',
+                handle:'.inner-block-header',
+                cursor:'move',
+                placeholder:'placeholder',
+                forcePlaceholderSize:true,
+                opacity:0.4,
+                activate:function (event, ui) {
+                    $(ui.item).addClass('ui-cur').parent('.content-wrapper-column').addClass('ui-prevent');
+                },
+                beforeStop:function (event, ui) {
+                    $('.placeholder').parent().find('.content-block:not(.ui-cur)').appendTo($('.ui-prevent').removeClass('ui-prevent'))
+                    $('.ui-cur').removeClass('ui-cur');
+                }
+
+            })
+            /*.disableSelection();*/
+
+        });
+    </script>
+</head>
+<body>
+<div class="header-bg"></div>
+<!-- PAGE -->
+<div id="main">
+
+<!-- ____ HEADER ____ -->
+<div id="header">
+    <div class="container">
+        <div class="h-logo"><a href="/"><img src="images/logotb.png" alt=""></a></div>
+        <div class="h-menu"><a href="#" class="plus">Plus</a> <a href="#">Курсы</a> <a href="#">Видеовстречи</a> <a
+                href="#">Тесты</a> <a href="#">Библиотека</a> <a href="#">Отчеты</a> <a href="#">Пользователи</a></div>
+
+        <div class="header-search search-animate">
+            <form action="" method="post">
+                <input type="submit" value="">
+                <input type="text" value="Поиск по сайту..." onfocus="if(this.value=='Поиск по сайту...')this.value='';"
+                       onblur="if(this.value=='')this.value='Поиск по сайту...';">
+            </form>
+        </div>
+        <div class="h-personal"><a href="#"><span><img src="images/content-im/ico.jpg" alt=""></span></a></div>
+    </div>
+</div>
+<!-- ____ /HEADER ____ -->
+<!-- ____ CONTENT ____ -->
+
+<div id="centring">
+<div class="content-wrapper-column first-column">
+<div class="content-block">
+<div class="inner-block-header">
+    <h3><img src="images/bg/current.png" alt=""/> Текущие тесты</h3>
+</div>
+<ul class="action-buttons">
+    <li><a href="#">новые</a></li>
+    <li class="active"><a href="#">архив</a></li>
+</ul>
+<div class="inner-block">
+<ul class="course-list">
+<li>
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/html.jpg"
+                                                                  alt=""/></b><i></i></span>
+        <em>курс</em> Основы HTML и CSS верстки </a>
+
+    <p>Александр Константинов,</p>
+
+    <div class="time-block red-time"><span>3 часа</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li>
+    <div class="col red" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/psh.jpg"
+                                                                  alt=""/></b><i></i></span>
+        <em>курс</em> Фотошоп для фотографов и дизайнеров </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>1 день</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li class="test-li">
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="img"><img src="images/content-im/test.png"
+                                                        alt=""/></span> <em>тест</em>
+        Был Энштейн
+        гением или он был
+        талантливым шарлатаном?
+    </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>7 дней</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li>
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/test.jpg"
+                                                                  alt=""/></b><i></i></span>
+        <em>курс</em> Новый тест Люшера-Ковальского </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>12 дней</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li class="poll-li">
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="img"><img src="images/content-im/poll.png"
+                                                        alt=""/></span> <em class="opr">опрос</em>
+        Быстрый опрос
+        для дизайнеров </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>бессрочно</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li>
+    <div class="col red" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/html.jpg"
+                                                                  alt=""/></b><i></i></span>
+        <em>курс</em> Основы HTML и CSS верстки </a>
+
+    <p>Александр Константинов,</p>
+
+    <div class="time-block red-time"><span>3 часа</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li>
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/psh.jpg"
+                                                                  alt=""/></b><i></i></span>
+        <em>курс</em> Фотошоп для фотографов и дизайнеров </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>1 день</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li class="test-li">
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="img"><img src="images/content-im/test.png"
+                                                        alt=""/></span> <em>тест</em>
+        Был Энштейн
+        гением или шарлатаном? </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>7 дней</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li>
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="corner-ico"><b><img src="images/content-im/test.jpg"
+                                                                  alt=""/></b><i></i></span>
+        <em>курс</em> Новый тест Люшера-Ковальского </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>12 дней</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+<li class="poll-li">
+    <div class="col" rel='#course-mes-234'>8</div>
+    <a href="#" class="img-box"> <span class="img"><img src="images/content-im/poll.png"
+                                                        alt=""/></span> <em class="opr">опрос</em>
+        Быстрый опрос
+        для дизайнеров </a>
+
+    <p>Александр Константинов</p>
+
+    <div class="time-block"><span>бессрочно</span></div>
+    <div class="progress-block">
+        <div class="arrow_box">
+            <strong>100 слушателей</strong>
+
+            <div class="item">
+                <div class="name">Не начали</div>
+                <div class="progress"><span class="yell" style="width: 100%;"></span></div>
+                <div class="amount">50</div>
+
+            </div>
+
+            <div class="item">
+                <div class="name">Начали</div>
+                <div class="progress"><span class="blue" style="width: 10%;"></span></div>
+                <div class="amount">5</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Не прошли</div>
+                <div class="progress"><span class="red" style="width: 26%;"></span></div>
+                <div class="amount">13</div>
+            </div>
+
+            <div class="item">
+                <div class="name">Прошли</div>
+                <div class="progress"><span class="green" style="width: 74%;"></span></div>
+                <div class="amount">37</div>
+            </div>
+
+        </div>
+        <span class="yell" style="width: 25%;"></span><span class="blue" style="width: 10%;"></span><span
+            class="red" style="width: 15%;"></span><span class="green" style="width: 50%;"></span><span
+            class="znach">99</span>
+    </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="content-wrapper-column">
+    <div class="content-block">
+        <div class="inner-block-header">
+            <h3><img src="images/bg/video.png" alt=""/> Видеовстречи</h3>
+
+            <div class="inner-search search-animate">
+                <form action="" method="post">
+                    <input type="submit" value=""/>
+                    <input type="text" value="Поиск по сайту..."
+                           onfocus="if(this.value=='Поиск по сайту...')this.value='';"
+                           onblur="if(this.value=='')this.value='Поиск по сайту...';"/>
+                </form>
+            </div>
+        </div>
+        <div class="inner-block">
+            <ul class="video-list">
+                <li class="now current-event">
+                    <div class="video-time"><span>уже<br/>
+                        идет
+                    </span>
+                    </div>
+
+                    <h3><a href="#">Английский язык за два дня в имперском стиле посмотрим сегодня ночью</a></h3>
+
+                    <p><a href="#" class="author">Александр-Первый Константинович Кукошонский</a></p>
+
+                    <a href="#" class="vbtn red">Завершить</a>
+                    <a href="#" class="vbtn green">Войти</a>
+
+                </li>
+                <li class="soon current-event">
+                    <div class="video-time">
+                        <small>Осталось</small>
+                        <strong>24</strong> минуты
+                    </div>
+
+
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><a href="#" class="author">Александр Константинов</a></p>
+
+                    <a href="#" class="vbtn green">Войти</a>
+
+                </li>
+                <li>
+                    <div class="video-time"> июнь <strong>30</strong></div>
+                    <h3><a href="#">Обсуждаем экологию с Михаилом Зеленским</a></h3>
+
+                    <p><strong>Ожидается подтверждение</strong> <a href="#" class="author">Иван Конинов</a></p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> июнь <strong>30</strong></div>
+                    <h3><a href="#">Обсуждаем экологию с Михаилом Зеленским</a></h3>
+
+                    <p><strong>Ожидается подтверждение</strong> <a href="#" class="author">Иван Конинов</a></p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> июнь <strong>30</strong></div>
+                    <h3><a href="#">Обсуждаем экологию с Михаилом Зеленским</a></h3>
+
+                    <p><strong>Ожидается подтверждение</strong> <a href="#" class="author">Иван Конинов</a></p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> июнь <strong>30</strong></div>
+                    <h3><a href="#">Обсуждаем экологию с Михаилом Зеленским</a></h3>
+
+                    <p><strong>Ожидается подтверждение</strong> <a href="#" class="author">Иван Конинов</a></p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+                <li>
+                    <div class="video-time"> август <strong>5</strong></div>
+                    <h3><a href="#">Дизайн интерьеров в имперском стиле</a></h3>
+
+                    <p><span class="begining">Начало:</span> 13.00 <a href="#" class="author">Александр Константинов</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper-column last">
+    <div class="content-block">
+        <div class="inner-block-header">
+            <h3><img src="images/bg/news.png" alt=""/> Лента информации</h3>
+
+            <div class="inner-search search-animate">
+                <form action="" method="post">
+                    <input type="submit" value=""/>
+                    <input type="text" value="Поиск по сайту..."
+                           onfocus="if(this.value=='Поиск по сайту...')this.value='';"
+                           onblur="if(this.value=='')this.value='Поиск по сайту...';"/>
+                </form>
+            </div>
+        </div>
+        <div class="inner-block">
+            <ul class="feed">
+                <li><img src="images/bg/start.png" alt=""/> <a href="#" class="event">Назначен курс «Креативные методики
+                    в рекламе и дизайне сыра»</a> <a href="#" class="author">Александр Константинов</a> <span
+                        class="feed-time">30 минут назад</span></li>
+                <li><img src="images/bg/fin.png" alt=""/> <a href="#" class="event">Закончен курс «Как делать курсы в
+                    системе Webils»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
+                </li>
+                <li><img src="images/content-im/im.png" alt=""/> <a href="#" class="event">Добавлена новая фотография в
+                    вашу в папку «Новые курсы»</a> <a href="#" class="author">Александр Константинов</a> <span
+                        class="feed-time">30 минут назад</span></li>
+                <li><img src="images/bg/del.png" alt=""/> <a href="#" class="event">Удален опрос «Сколько пальцев на
+                    ноге слона»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
+                </li>
+                <li><img src="images/bg/start.png" alt=""/> <a href="#" class="event">Назначен курс «Креативные методики
+                    в рекламе и дизайне сыра»</a> <a href="#" class="author">Александр Константинов</a> <span
+                        class="feed-time">30 минут назад</span></li>
+                <li><img src="images/bg/fin.png" alt=""/> <a href="#" class="event">Закончен курс «Как делать курсы в
+                    системе Webils»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
+                </li>
+                <li><img src="images/content-im/im.png" alt=""/> <a href="#" class="event">Добавлена новая фотография в
+                    вашу в папку «Новые курсы»</a> <a href="#" class="author">Александр Константинов</a> <span
+                        class="feed-time">30 минут назад</span></li>
+                <li><img src="images/bg/del.png" alt=""/> <a href="#" class="event">Удален опрос «Сколько пальцев на
+                    ноге слона»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
+                </li>
+                <li><img src="images/bg/start.png" alt=""/> <a href="#" class="event">Назначен курс «Креативные методики
+                    в рекламе и дизайне сыра»</a> <a href="#" class="author">Александр Константинов</a> <span
+                        class="feed-time">30 минут назад</span></li>
+                <li><img src="images/bg/fin.png" alt=""/> <a href="#" class="event">Закончен курс «Как делать курсы в
+                    системе Webils»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
+                </li>
+                <li><img src="images/content-im/im.png" alt=""/> <a href="#" class="event">Добавлена новая фотография в
+                    вашу в папку «Новые курсы»</a> <a href="#" class="author">Александр Константинов</a> <span
+                        class="feed-time">30 минут назад</span></li>
+                <li><img src="images/bg/del.png" alt=""/> <a href="#" class="event">Удален опрос «Сколько пальцев на
+                    ноге слона»</a> <a href="#" class="author">Александр Константинов</a> <span class="feed-time">30 минут назад</span>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<!-- ____ /CONTENT ____ -->
+<!-- ____ FOOTER ____ -->
+<div id="footer">
+    <p>© Name, 2012. All right reserved.</p>
+</div>
+<!-- ____ /FOOTER ____ -->
+</div>
+<!-- /PAGE -->
+<div class="box-mes" id="course-mes-235">
+    <div class="head-mes">
+        <h6 class="float_left">Сообщения</h6>
+
+
+        <div class="clear"></div>
+
+
+    </div>
+    <div class="container-mes small">
+
+
+    </div>
+
+</div>
+
+<div class="box-mes" id="course-mes-234">
+    <div class="head-mes">
+        <a class="float_right backs" href="#">Вернуться назад</a>
+        <h6>Сообщения</h6>
+
+
+    </div>
+    <div class="container-mes">
+        <div class="item-mes new-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava1.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер <span>6</span></div>
+                <p>Воспитание, в представлении Морено, взаимно. Сновидение...</p>
+            </div>
+        </div>
+        <div class="item-mes new-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava2.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Николай Носков <span>2</span></div>
+                <p>Представленный контент-анализ является психолингвистическим...</p>
+            </div>
+        </div>
+        <div class="item-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Автандил Калашников</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Автандил Калашников</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava3.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Автандил Калашников</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+        <div class="item-mes" rel="mes-user-22">
+            <div class="date-mes">Вчера, 12:45</div>
+            <div class="ava-mes"><img src="images/mava4.png" alt=""></div>
+            <div class="info-mes">
+                <div class="name-mes">Артур Миллер</div>
+                <p>Архетип, например, отражает аутотренинг одинаково по всем...</p>
+            </div>
+        </div>
+
+        <div class="inner_mes" id="mes-user-22">
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Воспитание, в представлении Морено, взаимно. Сновидение как принято считать... касается
+                        чего-то
+                        слишком общего. </p>
+
+                </div>
+            </div>
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Воспитание, в представлении Морено, взаимно. Сновидение как принято считать... касается
+                        чего-то
+                        слишком общего. </p>
+
+                </div>
+            </div>
+
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Представленный контент-анализ является психолингвистическим в своей основе. Вот воспитание, в
+                        представлении Морено, взаимно.
+                        чего-то слишком общего. Архетип, например, отражает аутотренинг одинаково. </p>
+
+                </div>
+            </div>
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Представленный контент-анализ является психолингвистическим в своей основе. Вот воспитание, в
+                        представлении Морено, взаимно.
+                        чего-то слишком общего. Архетип, например, отражает аутотренинг одинаково. </p>
+
+                </div>
+            </div>
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Представленный контент-анализ является психолингвистическим в своей основе. Вот воспитание, в
+                        представлении Морено, взаимно.
+                        чего-то слишком общего. Архетип, например, отражает аутотренинг одинаково. </p>
+
+                </div>
+            </div>
+            <div class="mes">
+                <img src="images/mava1.png" width="40" height="40" alt="">
+
+                <div class="txt">
+                    <div class="author_inf">
+                        <a href="#" class="float_left">стр 12</a><strong class="float_left">Артур Миллер</strong><em
+                            class="float_right">Сегодня, 12:45</em>
+
+
+                    </div>
+                    <p>Представленный контент-анализ является психолингвистическим в своей основе. Вот воспитание, в
+                        представлении Морено, взаимно.
+                        чего-то слишком общего. Архетип, например, отражает аутотренинг одинаково. </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="foot-mes">
+        <a class="all-mes" href="#">Все сообщения</a>
+    </div>
+    <div class="send_mes_form">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="ответить">
+
+    </div>
+    <div class="bot"></div>
+
+</div>
+</body>
+</html>

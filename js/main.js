@@ -86,3 +86,16 @@ this.tooltip = function(){
             .css("left",(e.pageX + yOffset) + "px");
     });
 };
+
+
+$(function(){
+    $('.action-buttons li a').click(function(){
+        $('.action-buttons li').removeClass('active');
+        $(this).parent().addClass('active');
+        return false;
+
+
+    });
+
+
+});
